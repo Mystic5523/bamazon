@@ -1,19 +1,19 @@
 var mysql = require("mysql");
-var inquirer=require("inquirer");
+var inquirer = require("inquirer");
 var connection = mysql.createConnection({
-  host: "localhost",
+    host: "localhost",
 
-  // Your port; if not 3306
-  port: 3306,
+    // Your port; if not 3306
+    port: 3306,
 
-  // Your username
-  user: "root",
+    // Your username
+    user: "root",
 
-  // Your password
-  password: "",
-    database: "greatBayDB"//set these two in final merge!!!!!!!!!!!!
+    // Your password
+    password: "testtest",
+    database: "bamazon"//set these two in final merge!!!!!!!!!!!!
 });
-connection.connect(function(err){
+connection.connect(function (err) {
     if (err) throw err;
     console.log("Connected as ID" + connection.threadID);
     afterConnection();
